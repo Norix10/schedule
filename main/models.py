@@ -16,3 +16,12 @@ class Lesson(models.Model):
 
     def __str__(self):
         return f"{self.subject} ({self.day_of_week}, {self.time})"
+
+
+class Teacher(models.Model):
+    first_name = models.CharField(max_length=10)
+    middle_name = models.CharField(max_length=10, default='')
+    last_name = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f"{self.first_name} {self.middle_name} {self.last_name} "
